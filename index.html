@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8";/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="reset.css"/>
+        <link rel="stylesheet" href="style.css";/>
+        <title>Encriptador de texto</title>
+    </head>
+
+    <body>
+        <header>
+            <h1><img src="imagenes/Logo.svg"></h1>
+        </header>
+
+        <main>
+            <div>
+                <textarea id="texto-usuario" cols="70" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+            </div>
+
+            <div>
+                <p>
+                    <img src="imagenes/bi_exclamation-circle-fill.svg"/> 
+                    Solo letras minúsculas y sin acentos
+                </p>
+            </div>
+
+            <div>
+                <button type="button" onclick="encriptar()">Encriptar</button> 
+                <button type="button" onclick="desencriptar()">Desencriptar</button> 
+            </div>
+
+            <div id="mensaje-inicial" class="mensaje-inicial">
+                <img src="imagenes/Muñeco.svg">
+                <h2>Ningún mensaje fue encontrado</h2>
+                <p>Ingresa el texto que desees encriptar o desencriptar.</p>                
+            </div>
+
+            <div id="container-encriptado">
+                <textarea id="mensaje-encriptado"></textarea>
+                <button id="boton-extra" onclick="copiarAlPortapapeles()">Copiar</button>
+            </div>
+
+            <div id="custom-alert" class="flex">
+                <img src="imagenes/gatito-alerta.jpg" alt="gatito alerta">
+                <p>¡No debes utilizar letras con acentos, caracteres especiales, ni mayúsculas!</p>
+                <button onclick="cerrarAlerta()">Cerrar</button>
+            </div>
+
+        </main>
+
+        <footer>
+            Un rodapie  con los datos de la persona que desarrolló el sitio web!
+        </footer>
+
+    </body>
+    <script src="app.js"></script>
+</html>
